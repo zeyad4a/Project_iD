@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT</title>
+    <link rel="stylesheet" href="./about.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../photo/echol.png">
+  </head>
+
+  <body>
+    <div class="min-h-full">
+        <nav class="bg-indigo-200">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 items-center justify-between">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <a href="./index.html"><img class="h-16 w-16" src="./photo/black echo.png" alt="Your Company">
+              </div>
+              <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                    <a href="./index.html" class="text-blue-600 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Introduction</a>
+                    <a href="./Solve.html" class="text-blue-600 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Solve</a>
+                    <a href="./PROJECT.html"  class="bg-blue-600 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">PROJECT</a>
+                    <a href="./Meet Our Team.html" class="text-blue-600 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Meet Our Team</a>
+                </div>
+              </div>
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-4 flex items-center md:ml-6">
+                <div class="relative ml-3">
+                  <div>
+                  </div>
+                  <script>
+                    const button = document.getElementById('user-menu-button');
+                    const menu = document.getElementById('user-menu');
+
+                    button.addEventListener('click', () => {
+                      if (menu.classList.contains('hidden')) {
+                        menu.classList.remove('hidden');
+                        setTimeout(() => {
+                          menu.classList.add('opacity-100');
+                          menu.classList.remove('opacity-0');
+                        }, 10); 
+                      } else {
+                        menu.classList.add('opacity-0');
+                        menu.classList.remove('opacity-100');
+                        menu.addEventListener('transitionend', () => {
+                          menu.classList.add('hidden');
+                        }, {
+                          once: true
+                        });
+                      }
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+            <div class="-mr-2 flex md:hidden">
+
+              <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-btn" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:hidden hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+            <a href="./index.html" class="text-blue-600 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Introduction</a>
+            <a href="./Solve.html" class="text-blue-600 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Solve</a>
+            <a href="./PROJECT.html"  class="bg-blue-600 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">PROJECT</a>
+            <a href="./Meet Our Team.html" class="text-blue-600 hover:bg-blue-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Meet Our Team</a>
+          </div>
+        </div>
+        <script>
+
+          const btn = document.getElementById('user-menu-btn');
+          const men = document.getElementById('mobile-menu');
+
+          btn.addEventListener('click', () => {
+            if (men.classList.contains('hidden')) {
+              men.classList.remove('hidden');
+              setTimeout(() => {
+                men.classList.add('opacity-100');
+                men.classList.remove('opacity-0');
+              }, 10); // Slight delay to allow the hidden class to be removed
+            } else {
+              men.classList.add('hidden');
+              men.classList.remove('opacity-100');
+              men.addEventListener('transitionend', () => {
+                men.classList.add('hidden');
+              }, {
+                once: true
+              });
+            }
+          });
+        </script>
+      </nav>
+
+      <header class="bg-white shadow">
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <h1 class="text-3xl font-bold tracking-tight text-gray-900">PROJECT</h1>
+        </div>
+      </header>
+        <main class="">
+        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+
+
+
+
+
+
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+        </main>
+
+    </body>
+
+    </html>
+
+
